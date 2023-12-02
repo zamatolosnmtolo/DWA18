@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
-import Hero from "./Components/Hero";
-import HomePage from "./Components/HomePage";
-import OpenPodcast from "./Components/OpenPodcast";
-import FavouritesPage from "./Components/FavouritesPage";
-import Episode from "./Components/Episode";
-import MiniPlayer from "./Components/MiniPlayer";
+import './App.css';
+import Hero from './Components/Hero';
+import HomePage from './Components/HomePage';
+import OpenPodcast from './Components/OpenPodcast';
+import FavouritesPage from './Components/FavouritesPage';
+import Episode from './Components/Episode';
+import MiniPlayer from './Components/MiniPlayer';
 
 export default function App() {
   const [favouritePodcasts, setFavouritePodcasts] = useState([]);
@@ -15,19 +15,24 @@ export default function App() {
 
   // Load favourited podcasts from local storage on component mount
   useEffect(() => {
-    const storedFavourites = localStorage.getItem('favouritePodcasts');
-    console.log('Stored Favourites:', storedFavourites);
-    if (storedFavourites) {
-      setFavouritePodcasts(JSON.parse(storedFavourites));
+    try {
+      const storedFavourites = localStorage.getItem('favouritePodcasts');
+      if (storedFavourites) {
+        setFavouritePodcasts(JSON.parse(storedFavourites));
+      }
+    } catch (error) {
+      console.error('Error loading favourites from local storage:', error);
     }
   }, []);
 
   // Save favourited podcasts to local storage whenever it changes
   useEffect(() => {
-    localStorage.setItem('favouritePodcasts', JSON.stringify(favouritePodcasts));
+    try {
+      localStorage.setItem('favouritePodcasts', JSON.stringify(favouritePodcasts));
+    } catch (error) {
+      console.error('Error saving favourites to local storage:', error);
+    }
   }, [favouritePodcasts]);
-
-  console.log('Favourite Podcasts in App:', favouritePodcasts);
 
   // Function to handle opening the mini player
   const handleMiniPlayerOpen = (episodeData) => {
