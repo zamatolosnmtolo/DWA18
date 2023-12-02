@@ -1,0 +1,46 @@
+/* Updated CSS */
+
+.episode-title {
+    color: black;
+    font-family: 'Aldrich' monospace;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-family: 'Victor Mono';
+}
+
+.episode-number {
+    color: black;
+    font-family: 'Oxygen';
+    font-size: smaller;
+    margin-bottom: 0%;
+}
+
+.episode-description {
+    color: black;
+    font-family: 'Oxygen';
+    font-size: smaller;
+    margin-top: 0%;
+}
+
+.play-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: rgb(11, 13, 14);
+    border: 5px;
+    border-width: 5px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-family: 'Tektur';
+    font-size: 10px;
+    padding: 5px;
+    margin-right: 3px;
+}
+
+.timestamp {
+    font-size: smaller;
+    margin-left: 3px;
+}
+
+.seekbar {
+    size: 6px;
+}

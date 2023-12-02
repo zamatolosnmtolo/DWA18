@@ -1,0 +1,63 @@
+.carousel-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    height: 300px;
+    overflow: hidden;
+    font-family: 'Pacifico', cursive;
+    color: #CC6129;
+    position: relative;
+    background-color: #d4d4d4;
+    /* Added to make positioning of arrows relative to this container */
+}
+
+
+/* Style the carousel item container */
+.slick-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Style the podcast image */
+.slick-slide img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+
+.next {
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../Images/Next.png');
+    /* Adjust the path accordingly */
+}
+
+.prev {
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../Images/Previous.png');
+    /* Adjust the path accordingly */
+}

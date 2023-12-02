@@ -1,0 +1,23 @@
+/* Hero.css */
+.hero {
+    background-image: url('../Images/HeaderBlackAndWhite.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #CC6129;
+    text-align: center;
+    padding: 50px;
+    margin: -50px;
+    margin-bottom: 20px;
+}
+
+.hero--title {
+    font-size: 4rem;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 25px;
+}
+
+.hero--subtitle {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-family: 'Comfortaa', sans-serif;
+}

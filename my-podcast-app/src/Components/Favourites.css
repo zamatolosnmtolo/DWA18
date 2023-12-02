@@ -1,0 +1,26 @@
+.sorting-buttons {
+    margin-bottom: 10px;
+}
+
+.favourite-podcast {
+    margin-bottom: 20px;
+}
+
+.podcast-image {
+    max-width: 100px;
+}
+
+.podcast-title {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: lightblue;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Tektur';
+    font-size: 12px;
+    margin-right: 3px;
+}
