@@ -1,9 +1,9 @@
 .all-podcasts-container {
     max-width: 100%;
     padding: 20px;
-    color: #283135;
+    color: #DD4B1A;
     font-size: small;
-    background-color:#3F3244;
+    background-color:#EF271B;
 }
 
 .sort-search-container {
@@ -71,7 +71,7 @@
     align-items: center;
     justify-content: center;
     /* Centers the content vertically */
-    background-color: #2F2A32;
+    background-color: #E28413;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -147,15 +147,15 @@
     border: none;
     padding: 5%;
     color: #ffffff;
-    background-color: #283135;
+    background-color: #DD4B1A;
 }
 
 .read-more-btn {
-    background-color: #283135;
+    background-color: #DD4B1A;
     font-family: 'Comfortaa', sans-serif;
 }
 
 .play-btn {
-    background-color: #283135;
+    background-color: #DD4B1A;
     font-family: 'Comfortaa', sans-serif;
 }
