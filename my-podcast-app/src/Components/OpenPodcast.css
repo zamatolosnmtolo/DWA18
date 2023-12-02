@@ -38,7 +38,7 @@
 
 /* Apply the dark grey background and white font color to the entire page */
 body {
-    background-color:#60495A ;
+    background-color:#EA1744 ;
     font-size: small;
     font-family: 'Oxygen';
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .podcast-name {
-    color: grey;
+    color: pink;
     text-align: center;
     font-family: 'Share Tech Mono';
 }
