@@ -2,15 +2,33 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './FavouritesPage.css';
 
-export default function FavouritesPage({ favouritePodcasts }) {
+// Assuming you have a genre mapping similar to the one in HomePage
+const genreMapping = {
+  1: 'Personal Growth',
+  2: 'True Crime and Investigative Journalism',
+  3: 'History',
+  4: 'Comedy',
+  5: 'Entertainment',
+  6: 'Business',
+  7: 'Fiction',
+  8: 'News',
+  9: 'Kids and Family',
+};
+
+const FavouritesPage = ({ favouritePodcasts }) => {
+  // State to manage expansion of podcast details
   const [isExpanded, setIsExpanded] = useState(false);
+  // State to manage sorted podcasts based on the selected option
   const [sortedPodcasts, setSortedPodcasts] = useState(favouritePodcasts);
+  // State to manage the selected sorting option
   const [sortOption, setSortOption] = useState('a-z');
 
+  // Toggle expansion of podcast details
   const toggleExpansion = () => {
     setIsExpanded(!isExpanded);
   };
 
+  // Handle sorting based on the selected option
   const handleSort = (option) => {
     setSortOption(option);
     switch (option) {
@@ -31,6 +49,12 @@ export default function FavouritesPage({ favouritePodcasts }) {
     }
   };
 
+  // Function to get the genre title based on the genre id
+  const getGenreTitle = (genreId) => {
+    // Map genreId to genre title using the genreMapping
+    return genreMapping[genreId] || 'Unknown Genre';
+  };
+
   return (
     <div>
       <h1 className='favourite-page-heading'>Favourites Page</h1>
@@ -47,6 +71,7 @@ export default function FavouritesPage({ favouritePodcasts }) {
                   <p>Seasons: {podcast.seasons}</p>
                   <p>Updated: {new Date(podcast.updated).toLocaleDateString('en-GB')}</p>
                 </div>
+                {/* Render episodes if available */}
                 {podcast.episodes &&
                   podcast.episodes.map((episode) => (
                     <div key={episode.id} className="episode-item">
@@ -66,5 +91,6 @@ export default function FavouritesPage({ favouritePodcasts }) {
       </div>
     </div>
   );
-}
+};
 
+export default FavouritesPage;
